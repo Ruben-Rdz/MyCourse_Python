@@ -14,5 +14,11 @@ To reduce the files, I will add a lilttle list of comands in git
 
  git config --global user.email "rrr@gmail.com"
 
+git clone [URL]
+git status 
+git pull - Recall every change ant update yours files.
+
+
+
 
 
