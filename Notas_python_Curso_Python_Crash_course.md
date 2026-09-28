@@ -10,15 +10,11 @@ To reduce the files, I will add a lilttle list of comands in git
  
 ### Initial configuration GIT 
 
- 'git config --global user.name "Rubs"'
 
- git config --global user.email "rrr@gmail.com"
+## Configuración local inicial
 
-git clone [URL]
-git status 
-git pull - Recall every change ant update yours files.
+`git config --global user.name "Ruben Rdz"` : Define tu nombre global para firmar commits en tu máquina.
 
-
-
+`git config --global user.email "rubens@hotmail.com"` : Define tu email global para firmar commits en tu máquina.
 
 
