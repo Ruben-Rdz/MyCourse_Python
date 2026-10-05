@@ -9,4 +9,5 @@ animals = ["Cat","Dog", "Ornitorrinco"]
 
 for animal in animals: 
     print(f"Animal with four feet like {animal}")
-print(f"All of these are very beutiful animals")
+print(f"All of these are very beutiful pets")
+
