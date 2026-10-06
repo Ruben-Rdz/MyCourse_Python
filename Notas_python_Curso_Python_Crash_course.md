@@ -18,3 +18,5 @@ To reduce the files, I will add a lilttle list of comands in git
 `git config --global user.email "rubens@hotmail.com"` : Define tu email global para firmar commits en tu máquina.
 
 
+## Prueba de comentarios desde Dell 7400
+
