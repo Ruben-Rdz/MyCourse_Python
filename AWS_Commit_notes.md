@@ -342,7 +342,30 @@ Terraform será la herramienta principal para gestionar infraestructura como có
  - Flexibilidad: Permite gestionar recursos fuera de AWS (MongoDB, GitHub, etc.)
  - Portabilidad: El conocimiento es transferible entre diferentes plataformas
 
+ 
+##### Modelos de precio
 
+- Free Tier 
+
+Ofrece en la creación de una cuenta nueva, salo de hasta 200 usd para poder utilizar algunos de los servicios de esta capa. Generalmente esta capa esta límitada a recursos básicos o pequeños.
+
+- On demand (Price as you go)
+
+Tiene precios fijos por segundo, minuto, gb, transito, etc. En general es la forma más común de utulizar AWS. Se elige el servicio, se despliega y listo.
+
+- Sport Instances 
+
+Este es util para cargas de trabajo que puedan interrumpirse, analisis de datos, entrenamiento de IAs, etc. Es hasta 90% más barato, sin embargo, su precio es fluctuante según la demanda. 
+
+- Reserved instances. 
+
+Si la organización es capaz de predecir el uso que tendrá de los recursos, es posible solicitar reservar instancias, el costo será menor. Sin mebargo, si las instnacias no son utilzadas, el monto se tendrá que pagar y los recursos no estarán siendo aprovechados. 
+
+Recomendaciones: 
+- Comprneder como se determina el precio de cada recurso a utilizar. 
+- Comenzar por Free Tier. 
+- Conforme vayamos teniendo tareas especialziadas podemos pensar en Spot Instances 
+- Cuando la empresa este madura y pueda tener estimados concretos, podemos reservar instancias. 
 
 
 
