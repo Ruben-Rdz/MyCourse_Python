@@ -367,6 +367,72 @@ Recomendaciones:
 - Conforme vayamos teniendo tareas especialziadas podemos pensar en Spot Instances 
 - Cuando la empresa este madura y pueda tener estimados concretos, podemos reservar instancias. 
 
+##### Regiones y Zonas de disponibilidad 
+
+- En AWS existen aproximadamente 41 regiones a lo largo del mundo. 
+- Por cada región se observan aproximadamene 3 zonas de disponiblidad. 
+- Existen diversos factores para elegir regiones de despliegue: 
+    - Existencia de los servicios a utilizar
+    - Leyes de prtección de datos 
+    - Elección con base en el precio. 
+    - Y sobre todo, con base en el publico objetivo que será usuario de la plataforma o programa.
+
+##### Zonas Edge
+
+Generalente utiliadas para CDN & Rute 53. Estos servicios daran soporte necesario para entrehar nuestro servicios de forma eficiente aunque nos encontremos desplegados en otra región. 
+
+
+##### Sistemas de computado
+
+Recordando que los sistemas pueden ser programdas en servidores, donde nos encargarmeos de gestionar al 100% los servicios, el SO, la seguridad, el ruteo, etc. 
+
+Comencemos por comprender los principales servicios de computo: 
+
+- EC2 (Elastic Compute Cloud): Ejecutamos la instancia a nivel maximo, la resonsabilidad es totalmente del usuario. 
+- Frgate: Podemo desplegar programas contenido en la nube a partir de su despliegue.
+- ECS (Elastic Container Service): Permite el despliegue de instancia de EC2 o Fargate. 
+- Lambda: IFeal para ejecuciones de funciones rapidas, para escalar de forma masiva y reducir en segundos. Para cargas de trabajo poco predibles. 
+
+Preguntas clave para elegir un servicio de compute
+
+    ¿Necesitas control total del sistema operativo? → EC2
+    ¿Necesitas orquestar contenedores con escalabilidad automática? → ECS, usando EC2 o Fargate como métodos de lanzamiento (se explicará en profundidad más adelante)
+    ¿Tu aplicación tiene picos de tráfico impredecibles y respuestas rápidas? → Lambda
+    ¿Tu aplicación tiene carga constante o procesos largos? → ECS o EC2
+
+Si la carga de trabajo es predecible podemos ejecutar instancias directamen o con EC2. Si requerimos velocidad de reacción y no sabemos cuanod podemos tener dicha carga, lo mejor será Lambda. 
+
+##### Sistemas de Storage
+
+Comprender la diferencia entre base de datos y Storage (Almacenamiento)
+ - Storage: Objetos, archivos
+ - Base de datps: datos estructurados, SQL, base de datos documentales o DynamoDB.
+
+Servcios principales: 
+    - S3 (SImple Storage Service)
+    - EBS (Elastic Bloc Storage)
+    - EFS (Elastic File System)
+
+Ultima ventaja de S3:
+
+Cuando guardas un nuevo fichero en un bucket de S3, se emite un evento Object created
+Estos eventos pueden disparar automáticamente otros servicios de AWS, como funciones Lambda
+Puedes configurar acciones cuando se actualiza, elimina o crea un fichero
+
+Con EBS:
+Tenemos un disco duro conectado a instancias EC2, cada que ejecutemos una de nuevo, podemos reconectarlo y los archivos permaneceran. 
+Para conectarlo a un nuevo servidor, debemos desconectarlo del previamente conectado.
+
+Con EFS: 
+Ya contamos con capacidad de conexión simultanea. Además tiene capacidad de escalar dinamicamente. 
+Más caro que EBS.
+
+**Resumen general**
+
+    S3: La opción más versátil y utilizada, perfecta para almacenamiento de objetos con durabilidad excepcional y amplia integración con otros servicios de AWS
+    EBS: Discos duros virtuales para instancias EC2 individuales, ideales cuando necesitas persistencia de datos independiente del ciclo de vida del servidor
+    EFS: Sistemas de ficheros compartidos entre múltiples instancias, perfectos para configuraciones compartidas y datos que necesitan acceso concurrente
+
 
 
 ### Módulo 2: Introducción a Amazon Web Services
