@@ -433,6 +433,132 @@ Más caro que EBS.
     EBS: Discos duros virtuales para instancias EC2 individuales, ideales cuando necesitas persistencia de datos independiente del ciclo de vida del servidor
     EFS: Sistemas de ficheros compartidos entre múltiples instancias, perfectos para configuraciones compartidas y datos que necesitan acceso concurrente
 
+##### Sistemas: Bases de datos
+
+Dentro de AWS podemos utilizar diversas BD, desde motores instalados en EC2 hasta motores desplegados por completo en AWS, como RDS o Autora. 
+
+EC2 - Compute con DBMS instalado. 
+RDS - Relational Databse Service.
+Autora - BD No relational 
+Document DB - BD No Relational de archivos
+
+Con base en el tipo de reponsabilidad que estemos buscando será el sistema que debemos elegir. Es decir, elegir el sistema a desplegar conllevará más o menos actividades derivadas de esto. 
+
+**EC2 + DBMS** -  Conlleva taras de mantenimeinto, respaldos, recuperación de datos, proceso de configuración de escalabilidad, configuración de alta disponbilidad, entre otros. A su vez, durante su operación será necesario tener bastante conocimient tecnico sobre la administración de esta base. 
+
+**RDS** - MySQL, PosgresSQL, MariaDB, Oracle, Microsoft SQL Server - Es la opción directa de AWS para poder utilizar base de datos comunes como SQL, MySQLO, MariaDB, entre otras relacionales. Esta evita el mantenimiento de lado del usuario, genera sistemas rescilientes. Podemos configurar que tenga replicación, en 1 o 2 zonas. Su escalabilidad es vertical, a más potencia mejor equipo deberá elegirse. 
+
+**Aurora** - MySQL y PostgresSQL - Ofrece Optimización nativa, mayor eficiencia, escalabilidad automatica, Modo serverless.
+
+**DynamoDB** - Diseñada por AWS - Sistema que admite el despliegue de BD no relacionales. Se admiten  Su diferencia a parte de ser no relacional, es que son sumamente rápidas, podemos tener crecimiento horizotal adicionando nodos. Complejidad en el modelado del mismo.
+
+--- 
+Clave: user123
+Atributos:
+  - ID: 123
+  - nombre: Martí
+
+---- 
+
+Caracteristicas principales: 
+    
+    - Consultas por clave
+    - Escalabilidad masiva 
+    - Gestión completamente delegada
+    - Velocidad extrema 
+
+Casos de uso ideales: 
+
+    - Gestión de sesiones 
+    - Datos de alta frecuencia de acceso.
+
+
+**ElastiCache**  
+
+Permite el despliegue con Redis y Memcached
+
+
+**Document DB** BD diseñada para el almacenamiento de documentos, comppatible con la API de Mongo DB. 
+
+**Open Search** - Versión propia de AWS de Elasticsearch.
+
+    - Almacenamiento y búsqueda de logs
+    - Búsquedas de texto completo en grandes volúmenes de datos
+    - Análisis de datos no estructurados
+
+**Redshift** - Serv de data de warehouse - 
+
+    - Data Lakes 
+    - Aplicaciones de big data
+    - Análisis de grandes vólumenes de datos. 
+
+**Selección del servicio adecuado**
+
+La elección del servicio de base de datos depende de los requisitos específicos:
+
+- Bases de datos relacionales tradicionales: RDS con MySQL, PostgreSQL, etc.
+- Necesidad de máximo rendimiento y escalabilidad en SQL: Aurora
+- Acceso ultrarrápido por clave con escalabilidad masiva: DynamoDB
+- Caché en memoria: ElastiCache
+- Bases de datos de documentos: DocumentDB
+- Búsqueda y análisis de texto: OpenSearch
+- Data warehousing y big data: Redshift
+
+##### Networking 
+
+**SDN**  - Software Defined Networking 
+
+AWS permite la configuración de una red mediante código, permite el modelado de la plataforma. Sin embargo, esta puede tener bugs. Se debe cuidar la seguridad de estos sitemas, como no dejar accesos a la BD, puertas al código o cualquier cosa que permita el ataque malicioso. 
+
+**VPC** - Virtual Private Cloud
+
+Los recuerdos desplegados en este tendrán comunicaicón a menos que sean separados. 
+
+Dentro de esta podemos utilizar algunos servicios como: 
+- Subredes 
+- Route tables
+- NAT Gateways
+- Otros. 
+
+**ELB** Elastic Load Balancing 
+
+**ALB** Application Load Balancer 
+Opera en la capa 7 (capa de aplicación) del modelo OSI. Es el más utilizado por desarrolladores y resulta ideal para:
+
+- Enrutamiento basado en endpoints (por ejemplo, dirigir /api a un conjunto de servidores y /user a otro)
+- Gestión de tráfico HTTP/HTTPS
+- Enrutamiento basado en contenido
+
+**NLB** Network Load Balancer 
+Opera en la capa 4 (capa de transporte) del modelo OSI. Se utiliza para:
+
+- Distribución de tráfico TCP/UDP de alto rendimiento
+- Gestión de grandes volúmenes de conexiones
+- Escenarios que requieren latencia extremadamente baja
+
+**GLB** Gateway Load Balancer 
+Opera en la capa 3 (capa de red) del modelo OSI. Sus casos de uso incluyen:
+
+- Implementación de firewalls virtuales
+- Inspección de tráfico
+- Sistemas de prevención de intrusiones
+
+
+La elección del tipo de balanceador depende del nivel de abstracción necesario: más cerca del hardware (capa 3), más cerca de los protocolos de red (capa 4), o más cerca de la implementación de aplicaciones web (capa 7).
+
+**Route 53**
+
+Servicio de DNS - Se encarga de tranformar la dirección escrita (https) en la IP de un portal, dando así acceso a lo que queremos consultar.
+
+Sirve para administrar todos los registros DNS para construir y mantener la infraestructura de dominios. 
+
+**Cloud Front**
+
+CDN - Content Delivery Networl - Trabaja en las Edge locations. 
+
+Su función principal es disminuir los tiempos de carga del contenido que el usuario quiera consultar. A paritr de la primer carga o consulta que el usuario haga, los demás podrán beneficiarse o el mismo, reducirá el tiempo que tarda en cargar.
+
+
 
 
 ### Módulo 2: Introducción a Amazon Web Services
@@ -450,6 +576,10 @@ Más caro que EBS.
 ### Módulo 14: Kubernetes
 ### Módulo 15: Kubernetes en Amazon Web Services (EKS)
 ### Proyecto Final
+
+
+
+
 
 
 
