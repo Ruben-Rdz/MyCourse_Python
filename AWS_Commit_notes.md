@@ -559,9 +559,57 @@ CDN - Content Delivery Networl - Trabaja en las Edge locations.
 Su función principal es disminuir los tiempos de carga del contenido que el usuario quiera consultar. A paritr de la primer carga o consulta que el usuario haga, los demás podrán beneficiarse o el mismo, reducirá el tiempo que tarda en cargar.
 
 
-
-
 ### Módulo 2: Introducción a Amazon Web Services
+
+#### Infraestructura tradicional y Computo Clásico (IaaS)
+
+##### Presentación de AWS EC2
+
+Las instancias EC2 se tratan de computadoras virtualizadas en la nube. 
+
+Se debe configurar lo siguinte: 
+
+- SO, mediante una AMI, podemos elegir la versión que reqwuerimos.
+- Instance Type: t2.micro, t3, etc. etc. 
+- Almacenamiento, por defecto tien uno volatil, cuando la instnacia se terminada este desaparece. 
+- Networking: Es posible definir la red a la que esta instnacia estará trabjando.
+- Acceso, como podemos conectarnos a la instancia, generalmentre utilizo SSM, pero en el ejempli practico podemos utilizar una llave .pem con cifrado RSA.
+
+Estados: Las instnacias pasan por diversos estados, pero podemos mencionarlos así: 
+    
+    - Pending: Cuando la PC esta por levantarse, dicho estatus no es cobrado. 
+    - Running: Cuando ya esta en ejecución.
+    - Stopped: Detenida, pero aún se puede encernder y seguir utilizando como se habia dejado previamente. 
+    - Terminated: Cuando dejamos de utlizar una instancia y queremos eliminarla, dicha instancia pasara a estado de terminada y luego desaparecerá.
+
+**Validando la configuración del servidor**
+
+Sistema Operativo
+    
+    - cat /etc/os-release
+
+Memoria RAM 
+
+    - free -h
+
+CPU 
+
+    - lscpu
+
+Espacio en disco 
+
+    - df -h
+
+Información de red
+
+    - hostname
+    - hostname -I
+
+
+
+
+
+
 ### Módulo 3: Infraestructura Tradicional y Compute Clásico
 ### Módulo 4: Almacenamiento y Bases de Datos
 ### Módulo 5: Contenedores y Docker
