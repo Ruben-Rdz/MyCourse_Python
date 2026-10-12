@@ -59,5 +59,5 @@ print(f"Funtion sum {sum(squares)}")
 
 ##Code Comprehensions 
 
-squeres = [ value**2 for values in range(2,10)]
+squeres = [ value**2 for value in range(2,10)]
 print(squares)
