@@ -1,13 +1,9 @@
 ### Try it yourself ### Python Crash course ###
-# Date: 09.20.2026
+# Date: 10.11.2026
 
-# 4-2. Animals: Think of at least three different animals that have a common characteristic. Store the names of these animals in a list, and then use a for
-# loop to print out the name of each animal. Modify your program to print a statement about each animal, such as A dog would make a great pet.
-#Add a line at the end of your program, stating what these animals have in common. You could print a sentence, such as Any of these animals would make a great pet!
+# 4-3. Counting to Twenty: Use a for loop to print the numbers from 1 to 20, inclusive.
 
-animals = ["Cat","Dog", "Ornitorrinco"]
-
-for animal in animals: 
-    print(f"Animal with four feet like {animal}")
-print(f"All of these are very beutiful pets")
+for numbers in list (
+    print(numbers + 1)
+)
 

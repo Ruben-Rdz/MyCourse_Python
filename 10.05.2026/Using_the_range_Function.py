@@ -14,6 +14,9 @@ for value in range(1,6):
 for value in range(6):
     print (f"\n {value}")
 
+print (f"\n ")
+
+
 # We can organice an rango into a list. 
 
 list_range = list(range(6))
@@ -50,6 +53,11 @@ print(squares)
 
 ## Working with stadistical funtions 
 
-print(max(squares))
-print(min(squares))
-print(sum(squares))
+print(f"Funtion max {max(squares)}")
+print(f"Funtion min {min(squares)}")
+print(f"Funtion sum {sum(squares)}")
+
+##Code Comprehensions 
+
+squeres = [ value**2 for values in range(2,10)]
+print(squares)
