@@ -32,12 +32,13 @@ print(f"\nMy last three elements are:")
 for player in players[-3:]:
     print(player.title())
 
-## How can we copy a list? 
 
+
+## How can we copy a list? 
 
 my_friends = players[:]
 
-print(f"Friend list: {my_friends}")
+print(f"\nFriend list: {my_friends}")
 
 print(f"Players list: {players}")
 
