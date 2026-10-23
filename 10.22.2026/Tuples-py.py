@@ -31,3 +31,7 @@ print(f"We redefine the scale with 150, 180")
 dimensions = (150,150)
 
 print(f"The new tuple is {dimensions}")
+
+
+## Add from x13
+
