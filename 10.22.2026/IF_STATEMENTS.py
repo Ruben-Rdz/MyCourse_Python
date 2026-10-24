@@ -47,15 +47,15 @@ if requested_topping != "anchovies":
 
 ## -- Numerical Comparisons
 
->>> age = 19 
->>> age < 21 
-True 
->>> age <= 21 
-True 
->>> age > 21 
-False 
->>> age >= 21 
-False
+        #>>> age = 19 
+        #>>> age < 21 
+        #True 
+        #>>> age <= 21 
+        #True 
+        #>>> age > 21 
+        #False 
+        #>>> age >= 21 
+        #False
 
 # Each mathematical comparison can be used as part of an if statement, which 
 # can help you detect the exact conditions of interest.
