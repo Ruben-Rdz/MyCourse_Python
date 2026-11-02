@@ -83,7 +83,7 @@ print ( edad_2 >= 19)
 print (f"\n Age: {edad}")
 print (f"Age 2: {edad_2}")
 
-print("edad >= 18 or edad_2 >= 18   - For this example, we try to valite that minimal 1 person will be oldest than 18.")
+print("edad >= 18 or edad_2 >= 18   - For this example, we try to validate that minimal 1 person will be oldest than 18.")
 print(edad >= 18 or edad_2 >= 18  )
 
 
@@ -158,7 +158,7 @@ print (f"Age 2: {edad_2}")
 
 print("edad >= 18 and edad_2 >= 18   - For this example, we try to validate both ages minimum of 18.")
 print(edad >= 18 and edad_2 >= 18  )
-print("1 person is junger")
+print("1 person is yunger")
 
 
 
@@ -176,7 +176,7 @@ if "canicas" not in request_list:
     print (f"Time to request 'Canicas'")
 
 print ("\nTest Cocas")
-if "cocas" in request_list:
+if "cocas" not in request_list:
     print ("Hay cocas están en el refrí")
 else:
     print ("Pide las cocas")
