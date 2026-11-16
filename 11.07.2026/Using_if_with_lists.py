@@ -43,6 +43,8 @@ if requested_toppings:
             print(f"Adding {requested_topping}")
         else:
             print(f"sorry we are out of {requested_topping}")
-        print("Finished making your pizza!")
+    print("Finished making your pizza!")
 else:
     print(f"\nAre you sure you want a plain pizza?")
+
+    
